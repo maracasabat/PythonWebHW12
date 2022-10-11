@@ -52,7 +52,3 @@ async def start():
 async def index(request):
     task1, task2, task3 = await start()
     return {'task1': task1, 'task2': task2, 'task3': task3}
-
-
-def setup_routes(app):
-    app.router.add_get('/', index)
