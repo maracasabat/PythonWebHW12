@@ -36,7 +36,7 @@ async def get_weather_3(session, url):
 
         temp = soup.find('span', {'class': 'temp'}).text
         wind = soup.find('span', {'class': 'windp'}).text
-        desc = soup.find('div', {'class': 'mid'}).text[5:-1]
+        desc = soup.find('div', {'class': 'mid'}).text[5:]
         return temp, wind, desc
 
 
